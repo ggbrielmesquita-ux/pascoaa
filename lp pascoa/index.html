@@ -1,0 +1,2379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Páscoa Lucrativa 2026 — Fature até R$10.000 nesta Páscoa</title>
+    <meta name="description"
+        content="Kit completo com receitas, planilhas e estratégias para você lucrar alto vendendo ovos de Páscoa artesanais. Por apenas R$27,99.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --red: #C41E2A;
+            --red-dark: #9B1520;
+            --red-deeper: #6B0F18;
+            --gold: #D4A017;
+            --gold-light: #F2D06B;
+            --gold-bright: #FFD700;
+            --green: #2E7D32;
+            --green-light: #4CAF50;
+            --choco: #3E1F0D;
+            --choco-light: #6D3A1F;
+            --cream: #FFF8E7;
+            --bg-light: #FFF5F5;
+            --text-dark: #1A0A0A;
+            --shadow: rgba(0, 0, 0, .15)
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #0c0404;
+            color: #fff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.15
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 20px
+        }
+
+        .text-center {
+            text-align: center
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all .8s cubic-bezier(.16, 1, .3, 1)
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: none
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg)
+            }
+
+            50% {
+                transform: translateY(-18px) rotate(4deg)
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, .45)
+            }
+
+            70% {
+                box-shadow: 0 0 0 22px rgba(255, 215, 0, 0)
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0)
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                left: -100%
+            }
+
+            100% {
+                left: 200%
+            }
+        }
+
+        @keyframes spin-slow {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes scroll-loop {
+            0% {
+                transform: translateX(0)
+            }
+
+            100% {
+                transform: translateX(calc(-50% - 12px))
+            }
+        }
+
+        @keyframes glow-pulse {
+
+            0%,
+            100% {
+                opacity: .6
+            }
+
+            50% {
+                opacity: 1
+            }
+        }
+
+        /* ===== BUTTONS ===== */
+        .cta-btn {
+            display: inline-block;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 17px;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+            color: var(--choco);
+            padding: 20px 40px;
+            border-radius: 60px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(212, 160, 23, .4), inset 0 2px 0 rgba(255, 255, 255, .3);
+            transition: all .25s ease;
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(212, 160, 23, .55)
+        }
+
+        .cta-btn:active {
+            transform: scale(.97)
+        }
+
+        .cta-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, .25), transparent);
+            transform: skewX(-20deg);
+            animation: shimmer 3s infinite
+        }
+
+        /* ===== FLOATING EGGS ===== */
+        .float-egg {
+            position: absolute;
+            border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+            opacity: .15;
+            z-index: 0;
+            pointer-events: none;
+            animation: float 6s ease-in-out infinite
+        }
+
+        /* ===== TIMER BAR ===== */
+        .timer-bar {
+            background: #111;
+            border-bottom: 1px solid rgba(255, 215, 0, .15);
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999
+        }
+
+        .timer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            font-weight: 700;
+            font-size: 14px
+        }
+
+        .timer-box {
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+            color: var(--choco);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 20px;
+            font-family: 'Montserrat';
+            font-weight: 900;
+            min-width: 40px;
+            text-align: center
+        }
+
+        /* ===== HERO ===== */
+        #hero {
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(107, 15, 24, .92) 0%, rgba(155, 21, 32, .85) 30%, rgba(196, 30, 42, .75) 60%, rgba(62, 31, 13, .9) 100%)
+        }
+
+        #particles-canvas {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none
+        }
+
+        .hero-content-wrap {
+            position: relative;
+            z-index: 5;
+            padding: 100px 0 80px;
+            width: 100%
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 40px
+        }
+
+        @media(min-width:900px) {
+            .hero-grid {
+                display: grid;
+                grid-template-columns: 1.2fr 1fr;
+                text-align: left;
+                gap: 50px;
+                align-items: center
+            }
+        }
+
+        /* Logo Badge */
+        .hero-logo {
+            display: inline-block;
+            margin-bottom: 0;
+            position: relative
+        }
+
+        .hero-logo img {
+            max-width: clamp(220px, 40vw, 360px);
+            height: auto;
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, .5));
+            animation: hero-float 5s ease-in-out infinite
+        }
+
+        @keyframes hero-float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg)
+            }
+
+            50% {
+                transform: translateY(-12px) rotate(1deg)
+            }
+        }
+
+        @media(max-width:899px) {
+            .hero-logo {
+                text-align: center;
+                display: flex;
+                justify-content: center
+            }
+        }
+
+        /* Hero Title */
+        .hero-title {
+            font-size: clamp(28px, 5.5vw, 54px);
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            text-shadow: 0 3px 15px rgba(0, 0, 0, .4)
+        }
+
+        .hero-title .price-highlight {
+            color: var(--gold-bright);
+            text-shadow: 0 0 30px rgba(255, 215, 0, .5), 0 0 60px rgba(255, 215, 0, .2);
+            position: relative;
+            display: inline-block
+        }
+
+        .hero-title .price-highlight::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, .3), transparent);
+            transform: skewX(-20deg);
+            animation: shimmer 3s infinite
+        }
+
+        .hero-sub {
+            font-size: clamp(15px, 2vw, 19px);
+            font-weight: 400;
+            opacity: .9;
+            margin-bottom: 35px;
+            line-height: 1.7;
+            max-width: 540px
+        }
+
+        @media(max-width:899px) {
+            .hero-sub {
+                margin: 0 auto 35px
+            }
+        }
+
+        .hero-proof {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: .8
+        }
+
+        @media(min-width:900px) {
+            .hero-proof {
+                justify-content: flex-start
+            }
+        }
+
+        .hero-stars {
+            color: var(--gold-bright);
+            letter-spacing: 2px
+        }
+
+        /* Hero Images / Carousel */
+        .hero-carousel {
+            position: relative;
+            z-index: 2;
+            max-width: 480px;
+            margin: 0 auto;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, .6), 0 0 0 2px rgba(255, 215, 0, .25);
+            aspect-ratio: 1;
+            background: #1a0a05
+        }
+
+        .hero-carousel .slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity .8s ease;
+            z-index: 0
+        }
+
+        .hero-carousel .slide.active {
+            opacity: 1;
+            z-index: 1
+        }
+
+        .hero-carousel .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .hero-carousel .slide-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, .85));
+            z-index: 2
+        }
+
+        .hero-carousel .slide-label h4 {
+            font-family: 'Montserrat';
+            font-size: 16px;
+            font-weight: 800;
+            margin-bottom: 4px
+        }
+
+        .hero-carousel .slide-label p {
+            font-size: 13px;
+            color: var(--gold-light);
+            font-weight: 600
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+            position: relative;
+            z-index: 2
+        }
+
+        .carousel-dots span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .25);
+            cursor: pointer;
+            transition: all .3s
+        }
+
+        .carousel-dots span.active {
+            background: var(--gold-bright);
+            transform: scale(1.3);
+            box-shadow: 0 0 10px rgba(255, 215, 0, .5)
+        }
+
+        /* Glassmorphism frame around carousel */
+        .hero-carousel::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 26px;
+            background: linear-gradient(135deg, rgba(255, 215, 0, .4), rgba(255, 255, 255, .1), rgba(255, 215, 0, .3));
+            z-index: -1;
+            pointer-events: none
+        }
+
+        .hero-carousel::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            box-shadow: inset 0 0 60px rgba(255, 215, 0, .06);
+            pointer-events: none;
+            z-index: 3
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            position: relative;
+            overflow: hidden
+        }
+
+        .section-light {
+            background: #fefaf5;
+            color: var(--text-dark);
+            padding: 80px 0
+        }
+
+        .section-dark {
+            background: var(--choco);
+            color: #fff;
+            padding: 80px 0
+        }
+
+        .section-red {
+            background: linear-gradient(160deg, var(--red), var(--red-dark));
+            color: #fff;
+            padding: 80px 0
+        }
+
+        .section-cream {
+            background: var(--cream);
+            color: var(--text-dark);
+            padding: 80px 0
+        }
+
+        .section-black {
+            background: #0c0404;
+            color: #fff;
+            padding: 80px 0
+        }
+
+        .sec-title {
+            font-size: clamp(26px, 4vw, 40px);
+            font-weight: 900;
+            margin-bottom: 50px
+        }
+
+        .sec-sub {
+            font-size: 16px;
+            opacity: .7;
+            margin-top: -40px;
+            margin-bottom: 40px
+        }
+
+        .badge-pill {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--choco);
+            font-weight: 800;
+            font-size: 12px;
+            padding: 6px 18px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px
+        }
+
+        /* ===== GALLERY GRID ===== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px
+        }
+
+        @media(min-width:768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px
+            }
+        }
+
+        .gallery-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            cursor: pointer;
+            transition: transform .3s, box-shadow .3s;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .2)
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .3)
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .5s
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.1)
+        }
+
+        .gallery-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 14px 16px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, .9));
+            font-weight: 700;
+            font-size: 14px;
+            font-family: 'Montserrat'
+        }
+
+        .gallery-price {
+            font-size: 12px;
+            color: var(--gold-light);
+            font-weight: 600;
+            margin-top: 4px
+        }
+
+        /* ===== FEATURE CARDS ===== */
+        .feat-grid {
+            display: grid;
+            gap: 24px
+        }
+
+        @media(min-width:768px) {
+            .feat-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 28px
+            }
+        }
+
+        .feat-card {
+            background: linear-gradient(160deg, #FFF9EF, #FFF5E1);
+            border: 1px solid rgba(212, 160, 23, .2);
+            border-radius: 24px;
+            padding: 35px 30px;
+            transition: all .4s cubic-bezier(.16, 1, .3, 1);
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+            color: var(--text-dark)
+        }
+
+        .feat-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, .12), 0 0 0 1px rgba(212, 160, 23, .3);
+            border-color: rgba(212, 160, 23, .5)
+        }
+
+        .feat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold-bright), var(--gold), transparent);
+            opacity: .9
+        }
+
+        .feat-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 70% 30%, rgba(255, 215, 0, .06), transparent 50%);
+            pointer-events: none
+        }
+
+        .feat-tag {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 5px 12px;
+            border-radius: 6px;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+            text-transform: uppercase
+        }
+
+        .feat-tag.green {
+            background: var(--green);
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(46, 125, 50, .3)
+        }
+
+        .feat-tag.gold {
+            background: var(--gold);
+            color: var(--choco);
+            box-shadow: 0 2px 8px rgba(212, 160, 23, .3)
+        }
+
+        .feat-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: var(--choco)
+        }
+
+        .feat-card p {
+            font-size: 14px;
+            opacity: .7;
+            line-height: 1.7;
+            margin-left: 58px;
+            color: #4a3520
+        }
+
+        /* SVG Icon Circle */
+        .feat-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative
+        }
+
+        .feat-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            position: relative;
+            z-index: 1
+        }
+
+        .feat-icon::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+            opacity: .2;
+            animation: icon-glow 3s ease-in-out infinite alternate
+        }
+
+        @keyframes icon-glow {
+            0% {
+                opacity: .15;
+                transform: scale(1)
+            }
+
+            100% {
+                opacity: .35;
+                transform: scale(1.1)
+            }
+        }
+
+        .feat-icon.gi {
+            background: rgba(46, 125, 50, .15);
+            color: var(--green)
+        }
+
+        .feat-icon.go {
+            background: rgba(212, 160, 23, .15);
+            color: var(--gold)
+        }
+
+        /* ===== CHECK LIST SECTION ===== */
+        .check-list {
+            max-width: 700px;
+            margin: 0 auto
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 18px 20px;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 14px;
+            transition: all .3s
+        }
+
+        .check-item:hover {
+            background: rgba(255, 255, 255, .08);
+            border-color: var(--gold);
+            transform: translateX(6px)
+        }
+
+        .check-icon {
+            width: 28px;
+            height: 28px;
+            background: var(--green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 14px;
+            font-weight: 800;
+            color: #fff
+        }
+
+        .check-text {
+            font-size: 16px;
+            line-height: 1.5
+        }
+
+        /* ===== REVIEWS CAROUSEL ===== */
+        .carousel-wrap {
+            overflow: hidden;
+            padding: 20px 0
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 24px;
+            width: max-content;
+            animation: scroll-loop 35s linear infinite
+        }
+
+
+
+        .rev-card {
+            width: 320px;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, .07);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 20px;
+            padding: 28px;
+            position: relative
+        }
+
+        .rev-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent)
+        }
+
+        .rev-stars {
+            color: var(--gold-bright);
+            font-size: 15px;
+            letter-spacing: 2px;
+            margin-bottom: 16px
+        }
+
+        .rev-text {
+            font-style: italic;
+            font-size: 15px;
+            line-height: 1.65;
+            opacity: .9;
+            margin-bottom: 20px
+        }
+
+        .rev-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            padding-top: 16px
+        }
+
+        .rev-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), var(--choco-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 16px;
+            color: #fff;
+            flex-shrink: 0
+        }
+
+        .rev-name {
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--gold-light)
+        }
+
+        .rev-city {
+            font-size: 12px;
+            opacity: .5
+        }
+
+        .rev-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--green);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 5px 10px;
+            border-radius: 50px
+        }
+
+        /* ===== OFFER ===== */
+        .offer-box {
+            max-width: 700px;
+            margin: 0 auto;
+            background: linear-gradient(160deg, rgba(26, 10, 5, .95), rgba(62, 31, 13, .9));
+            border: 3px solid var(--gold);
+            border-radius: 30px;
+            padding: 55px 35px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(255, 215, 0, .15), 0 0 80px rgba(255, 215, 0, .08), 0 30px 60px rgba(0, 0, 0, .5)
+        }
+
+        .offer-box::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: var(--gold);
+            border-radius: 50%;
+            filter: blur(200px);
+            opacity: .1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none
+        }
+
+        .offer-old {
+            font-size: 26px;
+            text-decoration: line-through;
+            opacity: .5;
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-family: 'Montserrat'
+        }
+
+        .offer-new {
+            font-size: clamp(64px, 14vw, 120px);
+            font-weight: 900;
+            font-family: 'Montserrat';
+            color: var(--gold-bright);
+            text-shadow: 0 0 50px rgba(255, 215, 0, .4), 0 4px 20px rgba(0, 0, 0, .3);
+            line-height: 1;
+            margin: 10px 0 5px;
+            position: relative;
+            display: inline-block
+        }
+
+        .offer-new::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, .25), transparent);
+            transform: skewX(-20deg);
+            animation: shimmer 3s infinite
+        }
+
+        .offer-cents {
+            font-size: clamp(28px, 5vw, 48px);
+            vertical-align: super
+        }
+
+        .offer-inst {
+            font-size: 17px;
+            opacity: .8;
+            margin-bottom: 35px;
+            font-weight: 600
+        }
+
+        .seals {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px
+        }
+
+        .seal {
+            background: rgba(255, 255, 255, .1);
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(255, 255, 255, .1)
+        }
+
+        .guarantee-box {
+            max-width: 500px;
+            margin: 40px auto 0;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 20px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 20px
+        }
+
+        @media(max-width:600px) {
+            .guarantee-box {
+                flex-direction: column;
+                text-align: center
+            }
+        }
+
+        .gar-shield {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 28px
+        }
+
+        .gar-title {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 4px
+        }
+
+        .gar-text {
+            font-size: 14px;
+            opacity: .7;
+            line-height: 1.5
+        }
+
+        /* ===== FAQ ===== */
+        .faq-list {
+            max-width: 750px;
+            margin: 0 auto
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, .08);
+            background: rgba(255, 255, 255, .03);
+            transition: border-color .3s
+        }
+
+        .faq-item:hover,
+        .faq-item.open {
+            border-color: rgba(255, 215, 0, .3)
+        }
+
+        .faq-q {
+            padding: 20px 24px;
+            font-family: 'Montserrat';
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color .3s
+        }
+
+        .faq-q:hover {
+            color: var(--gold-light)
+        }
+
+        .faq-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all .4s;
+            flex-shrink: 0
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+            background: var(--gold);
+            color: var(--choco)
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: all .4s ease;
+            padding: 0 24px;
+            font-size: 15px;
+            line-height: 1.7;
+            opacity: 0;
+            color: rgba(255, 255, 255, .7)
+        }
+
+        .faq-item.open .faq-a {
+            max-height: 300px;
+            padding: 0 24px 20px;
+            opacity: 1
+        }
+
+        /* ===== STICKY CTA ===== */
+        #sticky {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            background: rgba(12, 4, 4, .95);
+            backdrop-filter: blur(15px);
+            padding: 12px 20px;
+            border-top: 2px solid var(--gold);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateY(100%);
+            transition: transform .4s cubic-bezier(.16, 1, .3, 1)
+        }
+
+        #sticky.visible {
+            transform: translateY(0)
+        }
+
+        .st-info p {
+            font-family: 'Montserrat';
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 1.3
+        }
+
+        .st-info span {
+            color: var(--gold-bright);
+            font-size: 20px;
+            font-weight: 900
+        }
+
+        .st-btn {
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+            color: var(--choco);
+            font-family: 'Montserrat';
+            font-weight: 800;
+            font-size: 14px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            white-space: nowrap
+        }
+
+        @media(min-width:1024px) {
+            #sticky {
+                display: none !important
+            }
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #060202;
+            padding: 40px 0;
+            text-align: center;
+            color: rgba(255, 255, 255, .4);
+            font-size: 13px;
+            border-top: 1px solid rgba(255, 255, 255, .05)
+        }
+
+        footer h4 {
+            color: var(--gold);
+            font-family: 'Montserrat';
+            margin-bottom: 15px;
+            font-size: 16px;
+            letter-spacing: 2px
+        }
+
+        .foot-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 16px
+        }
+
+        @media(max-width:700px) {
+            .versus-grid {
+                grid-template-columns: 1fr !important;
+                gap: 10px !important
+            }
+
+            .versus-grid>div:nth-child(2) {
+                order: -1
+            }
+        }
+
+        /* ===== COMPREHENSIVE MOBILE OPTIMIZATION ===== */
+        @media(max-width:600px) {
+
+            /* Container tighter on mobile */
+            .container {
+                padding: 0 16px
+            }
+
+            /* Timer bar compact */
+            .timer-bar {
+                padding: 10px 0
+            }
+
+            .timer-inner {
+                font-size: 12px;
+                gap: 8px
+            }
+
+            .timer-box {
+                font-size: 16px;
+                padding: 4px 8px;
+                min-width: 32px
+            }
+
+            /* Hero mobile */
+            #hero {
+                min-height: auto
+            }
+
+            .hero-content-wrap {
+                padding: 30px 0 40px
+            }
+
+            .hero-grid {
+                gap: 28px
+            }
+
+            .hero-logo img {
+                max-width: 250px
+            }
+
+            .hero-title {
+                font-size: 28px;
+                letter-spacing: -.5px;
+                margin-bottom: 12px;
+                margin-top: 10px;
+                line-height: 1.15
+            }
+
+            .hero-sub {
+                font-size: 13px;
+                line-height: 1.5;
+                margin-bottom: 20px;
+                opacity: .8
+            }
+
+            .cta-btn {
+                font-size: 15px;
+                padding: 18px 30px;
+                width: 100% !important;
+                max-width: 100% !important
+            }
+
+            .hero-proof {
+                flex-direction: column;
+                gap: 6px;
+                font-size: 13px
+            }
+
+            /* Carousel mobile */
+            .hero-carousel,
+            .carousel-dots {
+                display: none !important;
+            }
+
+            /* Section spacing */
+            .section-light,
+            .section-dark,
+            .section-red,
+            .section-cream,
+            .section-black {
+                padding: 50px 0
+            }
+
+            .sec-title {
+                font-size: 22px;
+                margin-bottom: 30px
+            }
+
+            .badge-pill {
+                font-size: 11px;
+                padding: 5px 14px;
+                margin-bottom: 14px
+            }
+
+            /* Gallery 2-column tighter */
+            .gallery-grid {
+                gap: 12px
+            }
+
+            .gallery-card {
+                aspect-ratio: 2/3;
+                border-radius: 16px
+            }
+
+            .gallery-label {
+                padding: 12px 14px;
+                font-size: 13px
+            }
+
+            .gallery-price {
+                font-size: 11px
+            }
+
+            /* Feature cards mobile */
+            .feat-grid {
+                gap: 16px
+            }
+
+            .feat-card {
+                padding: 24px 20px;
+                border-radius: 18px
+            }
+
+            .feat-card h3 {
+                font-size: 17px;
+                gap: 10px
+            }
+
+            .feat-card p {
+                font-size: 13px;
+                margin-left: 0
+            }
+
+            .feat-icon {
+                width: 38px;
+                height: 38px;
+                border-radius: 12px
+            }
+
+            .feat-icon svg {
+                width: 20px;
+                height: 20px
+            }
+
+            /* Check list mobile */
+            .check-item {
+                padding: 14px 16px;
+                gap: 10px
+            }
+
+            .check-text {
+                font-size: 14px
+            }
+
+            /* Stats bar */
+            .count-stat {
+                font-size: clamp(28px, 8vw, 36px) !important
+            }
+
+            /* Versus grid mobile */
+            .versus-grid>div {
+                padding: 25px 18px !important;
+                border-radius: 18px !important
+            }
+
+            /* Review cards */
+            .rev-card {
+                width: 280px;
+                padding: 22px
+            }
+
+            .rev-text {
+                font-size: 14px
+            }
+
+            /* Offer box mobile */
+            .offer-box {
+                padding: 35px 20px;
+                border-radius: 22px
+            }
+
+            .offer-old {
+                font-size: 20px
+            }
+
+            .offer-inst {
+                font-size: 14px
+            }
+
+            .seals {
+                gap: 8px
+            }
+
+            .seal {
+                font-size: 11px;
+                padding: 6px 12px
+            }
+
+            .guarantee-box {
+                padding: 20px 16px;
+                gap: 14px;
+                border-radius: 16px
+            }
+
+            .gar-shield {
+                width: 48px;
+                height: 48px;
+                font-size: 22px
+            }
+
+            .gar-title {
+                font-size: 16px
+            }
+
+            .gar-text {
+                font-size: 13px
+            }
+
+            /* FAQ mobile */
+            .faq-q {
+                padding: 16px 18px;
+                font-size: 14px
+            }
+
+            .faq-a {
+                font-size: 14px;
+                padding: 0 18px
+            }
+
+            .faq-item.open .faq-a {
+                padding: 0 18px 16px
+            }
+
+            /* Sticky CTA mobile safe area */
+            #sticky {
+                padding: 10px 16px;
+                padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px))
+            }
+
+            .st-info p {
+                font-size: 12px
+            }
+
+            .st-info span {
+                font-size: 18px
+            }
+
+            .st-btn {
+                font-size: 13px;
+                padding: 12px 20px
+            }
+
+            /* Footer mobile */
+            footer {
+                padding: 30px 0
+            }
+
+            .foot-links {
+                gap: 14px;
+                font-size: 12px
+            }
+
+            /* Banner mobile */
+            [style*="clamp(200px,30vw,350px)"] {
+                height: 180px !important
+            }
+
+            /* Reduce animation distance on mobile */
+            .reveal {
+                transform: translateY(25px)
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TIMER BAR -->
+    <div class="timer-bar">
+        <div class="container timer-inner">
+            <span>⏰ OFERTA ENCERRA EM:</span>
+            <div style="display:flex;gap:6px;align-items:center">
+                <span class="timer-box" id="th">48</span><span style="font-weight:900">:</span>
+                <span class="timer-box" id="tm">00</span><span style="font-weight:900">:</span>
+                <span class="timer-box" id="ts">00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+        <!-- Full-bleed Background Image -->
+        <div class="hero-bg">
+            <img src="img/hero_eggs.png" alt="" aria-hidden="true">
+        </div>
+        <!-- Particles Canvas -->
+        <canvas id="particles-canvas"></canvas>
+
+        <div class="hero-content-wrap">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="reveal" style="position:relative;z-index:2">
+                        <!-- Styled Logo -->
+                        <div class="hero-logo">
+                            <img src="img/logo.png" alt="Páscoa Lucrativa 2026">
+                        </div>
+
+                        <h1 class="hero-title">
+                            Invista apenas R$27,99<br>e fature até<br>
+                            <span class="price-highlight"
+                                style="font-size:clamp(40px, 8vw, 75px); line-height: 1;">R$4.975,44</span><br>
+                            nesta Páscoa
+                        </h1>
+                        <p class="hero-sub">
+                            Videoaulas, receitas e ferramentas prontas para transformar sua Páscoa em lucro.
+                        </p>
+                        <a href="#oferta" class="cta-btn" style="width:100%;max-width:420px">
+                            QUERO FATURAR NESSA PÁSCOA →
+                        </a>
+                        <div class="hero-proof">
+                            <span class="hero-stars">★★★★★</span>
+                            <span>4.9/5 — Mais de 847 kits vendidos</span>
+                        </div>
+                    </div>
+
+                    <div class="reveal" style="transition-delay:.2s">
+                        <div class="hero-carousel" id="heroCarousel">
+                            <div class="slide active">
+                                <img loading="lazy" src="img/nutela.jpg" alt="Ovo Ninho com Nutella">
+                                <div class="slide-label">
+                                    <h4>Ovo Ninho c/ Nutella</h4>
+                                    <p>Receita mais vendida do kit</p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img loading="lazy" src="img/oreo.jpg" alt="Ovo Oreo Premium">
+                                <div class="slide-label">
+                                    <h4>Ovo Oreo Premium</h4>
+                                    <p>Sucesso garantido de vendas</p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img loading="lazy" src="img/img1.jpg" alt="Ovo de Morango">
+                                <div class="slide-label">
+                                    <h4>Ovo Morango c/ Choco Branco</h4>
+                                    <p>O mais pedido pelos clientes</p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img loading="lazy" src="img/trufas.jpg" alt="Kit Trufas">
+                                <div class="slide-label">
+                                    <h4>Kit Trufas Gourmet</h4>
+                                    <p>Perfeito para presentes</p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img loading="lazy" src="img/kitovo.jpg" alt="Kit Presente">
+                                <div class="slide-label">
+                                    <h4>Kit Presente Especial</h4>
+                                    <p>Aprenda a montar kits que vendem sozinhos</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-dots" id="carouselDots">
+                            <span class="active"></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VSL VIDEO SECTION -->
+    <section class="section-dark" style="padding: 40px 0 80px; position:relative; overflow:hidden;">
+        <!-- Glowing background behind video -->
+        <div
+            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:80%; height:80%; max-width:800px; background:var(--gold); filter:blur(150px); opacity:0.1; z-index:0; pointer-events:none;">
+        </div>
+
+        <div class="container text-center" style="position:relative; z-index:1;">
+            <span class="badge-pill reveal" style="background:var(--gold); margin-bottom:20px; color:var(--choco);">▶
+                APERTE O PLAY</span>
+            <h2 class="sec-title reveal"
+                style="max-width:850px; margin:0 auto 40px; font-size:clamp(22px, 4.5vw, 36px); line-height:1.3;">
+                Descubra o Segredo Para <span style="color:var(--gold-light)">Vender Ovos Todos Os Dias</span> e Faturar
+                Alto na Cozinha de Casa
+            </h2>
+
+            <!-- Video Card Glassmorphism -->
+            <div class="reveal"
+                style="max-width:850px; margin:0 auto; background:linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.01)); padding:15px; border-radius:30px; border:1px solid rgba(255,215,0,.2); box-shadow:0 30px 60px rgba(0,0,0,.6), 0 0 40px rgba(255,215,0,.1)">
+                <!-- Video Wrapper 16:9 -->
+                <div
+                    style="position:relative; padding-bottom:56.25%; height:0; border-radius:20px; overflow:hidden; background:#000; border:1px solid rgba(255,255,255,0.1);">
+                    <!-- Video Player Autoplay -->
+                    <video id="vslVid" src="img/VSL 1.mp4" autoplay muted loop playsinline
+                        style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border-radius: 20px;"
+                        title="VSL Páscoa Lucrativa">
+                    </video>
+
+                    <!-- Unmute Overlay -->
+                    <div id="unmuteOverlay"
+                        style="position:absolute; bottom:20px; right:20px; display:flex; align-items:center; justify-content:center; gap:8px; background:rgba(0,0,0,0.7); border:1px solid rgba(255,215,0,0.3); padding:8px 16px; border-radius: 50px; z-index:2; cursor:pointer; color:var(--gold-bright); font-family:'Montserrat'; font-weight:800; font-size:13px; text-transform:uppercase; box-shadow:0 5px 15px rgba(0,0,0,0.5); transition:all 0.3s;"
+                        onclick="unmuteVsl()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M16.5 12A4.5 4.5 0 0014 8v8a4.5 4.5 0 002.5-4zM11 5L6 9H2v6h4l5 4V5zm8.5 7c0-3.3-1.99-6.13-4.88-7.48v2.1c1.81 1.05 3.03 2.97 3.03 5.38 0 2.4-1.22 4.32-3.03 5.37v2.1c2.89-1.34 4.88-4.17 4.88-7.47z" />
+                        </svg>
+                        Ouvir com Som
+                    </div>
+                </div>
+            </div>
+
+            <p class="reveal" style="margin-top:25px; font-size:14px; opacity:0.6;">🔔 <b>Atenção:</b> Assista este
+                vídeo curto até o final para liberar o seu kit completo.</p>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section-black">
+        <div class="container text-center">
+            <span class="badge-pill reveal">🍫 RECEITAS PREMIUM</span>
+            <h2 class="sec-title reveal">Você Vai Aprender a Criar Ovos Que Vendem Sozinhos</h2>
+
+            <div class="gallery-grid">
+                <div class="gallery-card reveal">
+                    <img loading="lazy" src="img/nutela.jpg" alt="Ovo Ninho com Nutella">
+                    <div class="gallery-label">Ovo Ninho c/ Nutella<div class="gallery-price">Venda por R$89 — Lucro
+                            R$61</div>
+                    </div>
+                </div>
+                <div class="gallery-card reveal" style="transition-delay:.1s">
+                    <img loading="lazy" src="img/oreo.jpg" alt="Ovo Oreo Premium">
+                    <div class="gallery-label">Ovo Oreo Premium<div class="gallery-price">Venda por R$95 — Lucro R$67
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card reveal" style="transition-delay:.2s">
+                    <img loading="lazy" src="img/img1.jpg" alt="Ovo de Morango">
+                    <div class="gallery-label">Ovo Morango c/ Choco Branco<div class="gallery-price">Venda por R$110 —
+                            Lucro R$78</div>
+                    </div>
+                </div>
+                <div class="gallery-card reveal" style="transition-delay:.3s">
+                    <img loading="lazy" src="img/img2.jpeg" alt="Ovo Brigadeiro Gourmet">
+                    <div class="gallery-label">Ovo Brigadeiro Gourmet<div class="gallery-price">Venda por R$85 — Lucro
+                            R$59</div>
+                    </div>
+                </div>
+                <div class="gallery-card reveal" style="transition-delay:.1s">
+                    <img loading="lazy" src="img/trufas.jpg" alt="Kit Trufas Gourmet">
+                    <div class="gallery-label">Kit Trufas Gourmet<div class="gallery-price">Venda por R$65 — Lucro R$48
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card reveal" style="transition-delay:.2s">
+                    <img loading="lazy" src="img/prestigio.jpg" alt="Ovo Prestígio">
+                    <div class="gallery-label">Ovo Prestígio<div class="gallery-price">Venda por R$90 — Lucro R$63</div>
+                    </div>
+                </div>
+                <div class="gallery-card reveal" style="transition-delay:.3s">
+                    <img loading="lazy" src="img/churros.jpg" alt="Ovo Churros">
+                    <div class="gallery-label">Ovo Churros c/ Doce de Leite<div class="gallery-price">Venda por R$95 —
+                            Lucro R$68</div>
+                    </div>
+                </div>
+                <div class="gallery-card reveal" style="transition-delay:.4s">
+                    <img loading="lazy" src="img/kitovo.jpg" alt="Kit Presente Especial">
+                    <div class="gallery-label">Kit Presente Especial<div class="gallery-price">Venda por R$150 — Lucro
+                            R$105</div>
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin-top:24px;font-size:14px;opacity:.5;font-style:italic">
+                16 receitas profissionais passo a passo com custo detalhado de cada produto.
+            </p>
+        </div>
+    </section>
+
+    <!-- PRA QUEM É -->
+    <section class="section-dark" style="padding-top:90px;padding-bottom:90px">
+        <div class="container text-center">
+            <span class="badge-pill reveal">✅ PARA VOCÊ</span>
+            <h2 class="sec-title reveal">Esse Kit Foi Feito Pra Você Que...</h2>
+            <div class="check-list">
+                <div class="check-item reveal">
+                    <div class="check-icon">✓</div>
+                    <div class="check-text">Quer uma renda extra de R$3.000 a R$10.000 na Páscoa trabalhando de casa
+                    </div>
+                </div>
+                <div class="check-item reveal" style="transition-delay:.08s">
+                    <div class="check-icon">✓</div>
+                    <div class="check-text">Nunca fez um ovo de páscoa na vida mas quer aprender do absoluto zero</div>
+                </div>
+                <div class="check-item reveal" style="transition-delay:.16s">
+                    <div class="check-icon">✓</div>
+                    <div class="check-text">Já faz doces artesanais mas não consegue precificar corretamente e acaba no
+                        prejuízo</div>
+                </div>
+                <div class="check-item reveal" style="transition-delay:.24s">
+                    <div class="check-icon">✓</div>
+                    <div class="check-text">Quer receitas TESTADAS que realmente vendem, não receitas genéricas de
+                        internet</div>
+                </div>
+                <div class="check-item reveal" style="transition-delay:.32s">
+                    <div class="check-icon">✓</div>
+                    <div class="check-text">Precisa se organizar com planilhas profissionais para controlar pedidos e
+                        entregas</div>
+                </div>
+                <div class="check-item reveal" style="transition-delay:.4s">
+                    <div class="check-icon">✓</div>
+                    <div class="check-text">Quer um passo a passo claro e direto para começar a vender AGORA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O QUE RECEBE -->
+    <section class="section-red" style="padding-top:80px;padding-bottom:100px">
+        <!-- Ambient glow -->
+        <div
+            style="position:absolute;width:60vw;height:60vw;background:var(--gold);border-radius:50%;filter:blur(300px);opacity:.05;top:-20%;left:50%;transform:translateX(-50%);pointer-events:none">
+        </div>
+
+        <div class="container text-center" style="position:relative;z-index:2">
+            <span class="badge-pill reveal">KIT COMPLETO</span>
+            <h2 class="sec-title reveal" style="color:#fff">Olha Tudo Que Você Recebe:</h2>
+
+            <div class="feat-grid">
+                <!-- Card 1: Video Aulas -->
+                <div class="feat-card reveal">
+                    <span class="feat-tag red" style="background:var(--red);color:#fff">NOVIDADE</span>
+                    <h3>
+                        <div class="feat-icon gi" style="background:linear-gradient(135deg, #e52d27, #b31217)"><svg
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                                    fill="#fff" />
+                            </svg></div>
+                        +5 Aulas Práticas em Vídeo
+                    </h3>
+                    <p>Além de todo material escrito, adicionamos mais de 5 aulas diretas ao ponto mostrando na prática
+                        a temperagem do chocolate, recheios e embalagens profissionais.</p>
+                </div>
+
+                <!-- Card 2: E-book -->
+                <div class="feat-card reveal" style="transition-delay:.1s">
+                    <span class="feat-tag green">40+ PÁGINAS</span>
+                    <h3>
+                        <div class="feat-icon gi"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z" />
+                            </svg></div>
+                        E-book Guia Completo
+                    </h3>
+                    <p>12 capítulos: precificação inteligente, marketing Instagram/WhatsApp, lista de fornecedores
+                        baratos, gestão de encomendas e cronograma completo semana a semana.</p>
+                </div>
+
+                <!-- Card 2: Receitas -->
+                <div class="feat-card reveal" style="transition-delay:.1s">
+                    <span class="feat-tag gold">16 RECEITAS</span>
+                    <h3>
+                        <div class="feat-icon go"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M8.1 13.34l2.83-2.83L3.91 3.5a4.008 4.008 0 000 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L4.4 19.17a.996.996 0 000 1.41c.39.39 1.02.39 1.41 0L12 14.41l6.18 6.18c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 13l1.47-1.47z" />
+                            </svg></div>
+                        Livro de Receitas Profissionais
+                    </h3>
+                    <p>Ninho c/ Nutella, Oreo, Prestígio, Brigadeiro, Churros, 4 trufas gourmet, 3 bombons e kit
+                        presente. Custo real e margem de lucro calculada.</p>
+                </div>
+
+                <!-- Card 3: Planilha -->
+                <div class="feat-card reveal" style="transition-delay:.2s">
+                    <span class="feat-tag green">AUTOMÁTICA</span>
+                    <h3>
+                        <div class="feat-icon gi"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1H6.3c.13 2.01 1.62 3.14 3.5 3.53V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
+                            </svg></div>
+                        Planilha de Precificação
+                    </h3>
+                    <p>Coloque os ingredientes → a planilha calcula custo, preço de venda ideal, lucro líquido e margem
+                        automaticamente. Acabou o achismo.</p>
+                </div>
+
+                <!-- Card 4: Encomendas -->
+                <div class="feat-card reveal" style="transition-delay:.3s">
+                    <span class="feat-tag gold">CONTROLE TOTAL</span>
+                    <h3>
+                        <div class="feat-icon go"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z" />
+                                <path d="M7 12h2v5H7zm4-5h2v10h-2zm4 3h2v7h-2z" />
+                            </svg></div>
+                        Controle de Encomendas
+                    </h3>
+                    <p>Registre pedidos, controle pagamentos, acompanhe entregas. Dashboard completo com lucro líquido e
+                        gastos por categoria.</p>
+                </div>
+
+                <!-- Card 5: Checklist -->
+                <div class="feat-card reveal" style="transition-delay:.4s">
+                    <span class="feat-tag green">48 TAREFAS</span>
+                    <h3>
+                        <div class="feat-icon gi"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M22 5.18L10.59 16.6l-4.24-4.24 1.41-1.41 2.83 2.83 10-10L22 5.18zM19.79 10.22C19.92 10.79 20 11.39 20 12c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8c1.58 0 3.04.46 4.28 1.25l1.45-1.45A9.869 9.869 0 0012 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-1.19-.22-2.33-.6-3.39l-1.61 1.61z" />
+                            </svg></div>
+                        Checklist Semana a Semana
+                    </h3>
+                    <p>6 semanas de cronograma estratégico. Imprima, cole na parede e marque cada tarefa até a Páscoa.
+                        Organização total sem stress.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NÚMEROS & PROVA SOCIAL -->
+    <section style="position:relative;overflow:hidden;padding:0">
+        <!-- Stats Bar -->
+        <div style="background:linear-gradient(160deg,var(--cream) 0%,#FFF5E1 100%);padding:70px 0;position:relative">
+            <div
+                style="position:absolute;width:50vw;height:50vw;background:var(--gold);border-radius:50%;filter:blur(300px);opacity:.08;top:-30%;right:-10%">
+            </div>
+            <div
+                style="position:absolute;width:30vw;height:30vw;background:var(--red);border-radius:50%;filter:blur(250px);opacity:.05;bottom:-20%;left:-5%">
+            </div>
+            <div class="container">
+                <div
+                    style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;text-align:center">
+                    <div class="reveal"
+                        style="background:linear-gradient(160deg,#fff,#FFF9EF);border-radius:20px;padding:30px 16px;border:1px solid rgba(212,160,23,.2);box-shadow:0 8px 30px rgba(0,0,0,.06)">
+                        <div
+                            style="width:50px;height:50px;background:linear-gradient(135deg,var(--gold-bright),var(--gold));border-radius:14px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center">
+                            <svg width="24" height="24" fill="var(--choco)" viewBox="0 0 24 24">
+                                <path
+                                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                            </svg>
+                        </div>
+                        <div
+                            style="font-family:'Montserrat';font-weight:900;font-size:clamp(28px,5vw,40px);color:var(--choco);margin-bottom:4px;line-height:1">
+                            <span class="count-stat" data-target="847">0</span>+
+                        </div>
+                        <div
+                            style="font-size:12px;color:var(--choco-light);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;opacity:.7">
+                            Kits vendidos</div>
+                    </div>
+                    <div class="reveal"
+                        style="background:linear-gradient(160deg,#fff,#FFF9EF);border-radius:20px;padding:30px 16px;border:1px solid rgba(212,160,23,.2);box-shadow:0 8px 30px rgba(0,0,0,.06);transition-delay:.1s">
+                        <div
+                            style="width:50px;height:50px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:14px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center">
+                            <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+                                <path
+                                    d="M8.1 13.34l2.83-2.83L3.91 3.5a4.008 4.008 0 000 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L4.4 19.17a.996.996 0 000 1.41c.39.39 1.02.39 1.41 0L12 14.41l6.18 6.18c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 13l1.47-1.47z" />
+                            </svg>
+                        </div>
+                        <div
+                            style="font-family:'Montserrat';font-weight:900;font-size:clamp(28px,5vw,40px);color:var(--choco);margin-bottom:4px;line-height:1">
+                            <span class="count-stat" data-target="16">0</span>
+                        </div>
+                        <div
+                            style="font-size:12px;color:var(--choco-light);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;opacity:.7">
+                            Receitas testadas</div>
+                    </div>
+                    <div class="reveal"
+                        style="background:linear-gradient(160deg,#fff,#FFF9EF);border-radius:20px;padding:30px 16px;border:1px solid rgba(212,160,23,.2);box-shadow:0 8px 30px rgba(0,0,0,.06);transition-delay:.2s">
+                        <div
+                            style="width:50px;height:50px;background:linear-gradient(135deg,var(--gold-bright),var(--gold));border-radius:14px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center">
+                            <svg width="24" height="24" fill="var(--choco)" viewBox="0 0 24 24">
+                                <path
+                                    d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1H6.3c.13 2.01 1.62 3.14 3.5 3.53V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
+                            </svg>
+                        </div>
+                        <div
+                            style="font-family:'Montserrat';font-weight:900;font-size:clamp(28px,5vw,40px);color:var(--choco);margin-bottom:4px;line-height:1">
+                            R$<span class="count-stat" data-target="4975">0</span></div>
+                        <div
+                            style="font-size:12px;color:var(--choco-light);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;opacity:.7">
+                            Faturamento médio</div>
+                    </div>
+                    <div class="reveal"
+                        style="background:linear-gradient(160deg,#fff,#FFF9EF);border-radius:20px;padding:30px 16px;border:1px solid rgba(46,125,50,.15);box-shadow:0 8px 30px rgba(0,0,0,.06);transition-delay:.3s">
+                        <div
+                            style="width:50px;height:50px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:14px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center">
+                            <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                            </svg>
+                        </div>
+                        <div
+                            style="font-family:'Montserrat';font-weight:900;font-size:clamp(28px,5vw,40px);color:var(--green);margin-bottom:4px;line-height:1">
+                            <span class="count-stat" data-target="98">0</span>%
+                        </div>
+                        <div
+                            style="font-size:12px;color:var(--choco-light);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;opacity:.7">
+                            Satisfação</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Antes x Depois (Transformação) -->
+        <div style="background:var(--cream);padding:80px 0;position:relative">
+            <div class="container text-center">
+                <span class="badge-pill reveal">💡 A TRANSFORMAÇÃO</span>
+                <h2 class="sec-title reveal" style="color:var(--text-dark)">De Insegura a Empreendedora de Sucesso</h2>
+
+                <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:20px;max-width:900px;margin:0 auto;align-items:stretch"
+                    class="versus-grid">
+                    <!-- ANTES -->
+                    <div class="reveal"
+                        style="background:linear-gradient(160deg,#2c1810,#1a0e08);border-radius:24px;padding:35px 25px;color:#fff;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.06)">
+                        <div
+                            style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#C41E2A,transparent)">
+                        </div>
+                        <div
+                            style="font-family:'Montserrat';font-weight:900;font-size:14px;color:var(--red);text-transform:uppercase;letter-spacing:3px;margin-bottom:25px">
+                            ✕ Antes</div>
+                        <div style="display:flex;flex-direction:column;gap:16px;text-align:left">
+                            <div style="display:flex;gap:12px;align-items:flex-start"><span
+                                    style="color:var(--red);font-size:18px;line-height:1.3">✕</span><span
+                                    style="font-size:15px;opacity:.8;line-height:1.5">Não sabe quanto cobrar e acaba
+                                    vendendo no prejuízo</span></div>
+                            <div style="display:flex;gap:12px;align-items:flex-start"><span
+                                    style="color:var(--red);font-size:18px;line-height:1.3">✕</span><span
+                                    style="font-size:15px;opacity:.8;line-height:1.5">Perde pedidos por falta de
+                                    organização</span></div>
+                            <div style="display:flex;gap:12px;align-items:flex-start"><span
+                                    style="color:var(--red);font-size:18px;line-height:1.3">✕</span><span
+                                    style="font-size:15px;opacity:.8;line-height:1.5">Receitas inconsistentes que não
+                                    dão certo</span></div>
+                            <div style="display:flex;gap:12px;align-items:flex-start"><span
+                                    style="color:var(--red);font-size:18px;line-height:1.3">✕</span><span
+                                    style="font-size:15px;opacity:.8;line-height:1.5">Fotos amadoras que não atraem
+                                    clientes</span></div>
+                            <div style="display:flex;gap:12px;align-items:flex-start"><span
+                                    style="color:var(--red);font-size:18px;line-height:1.3">✕</span><span
+                                    style="font-size:15px;opacity:.8;line-height:1.5">Stress e ansiedade na véspera da
+                                    Páscoa</span></div>
+                        </div>
+                    </div>
+
+                    <!-- VS -->
+                    <div style="display:flex;align-items:center;justify-content:center">
+                        <div
+                            style="width:60px;height:60px;background:linear-gradient(135deg,var(--gold-bright),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat';font-weight:900;font-size:14px;color:var(--choco);box-shadow:0 6px 20px rgba(212,160,23,.4)">
+                            VS</div>
+                    </div>
+
+                    <!-- DEPOIS -->
+                    <div class="reveal"
+                        style="background:linear-gradient(160deg,#0d2e12,#071a09);border-radius:24px;padding:35px 25px;color:#fff;position:relative;overflow:hidden;border:1px solid rgba(46,125,50,.2);transition-delay:.15s">
+                        <div
+                            style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--green-light),transparent)">
+                        </div>
+                        <div
+                            style="font-family:'Montserrat';font-weight:900;font-size:14px;color:var(--green-light);text-transform:uppercase;letter-spacing:3px;margin-bottom:25px">
+                            ✓ Depois</div>
+                        <div style="display:flex;flex-direction:column;gap:16px;text-align:left">
+                            <div style="display:flex;gap:12px;align-items:flex-start"><span
+                                    style="color:var(--green-light);font-size:18px;line-height:1.3">✓</span><span
+                                    style="font-size:15px;opacity:.9;line-height:1.5">Precificação calculada com lucro
+                                    garantido em cada ovo</span></div>
+                            <div style="display:flex;gap:12px;align-items:flex-start"><span
+                                    style="color:var(--green-light);font-size:18px;line-height:1.3">✓</span><span
+                                    style="font-size:15px;opacity:.9;line-height:1.5">Planilha automática controlando
+                                    todos os pedidos</span></div>
+                            <div style="display:flex;gap:12px;align-items:flex-start"><span
+                                    style="color:var(--green-light);font-size:18px;line-height:1.3">✓</span><span
+                                    style="font-size:15px;opacity:.9;line-height:1.5">16 receitas profissionais à prova
+                                    de erros</span></div>
+                            <div style="display:flex;gap:12px;align-items:flex-start"><span
+                                    style="color:var(--green-light);font-size:18px;line-height:1.3">✓</span><span
+                                    style="font-size:15px;opacity:.9;line-height:1.5">Templates prontos que atraem
+                                    vendas pelo Instagram</span></div>
+                            <div style="display:flex;gap:12px;align-items:flex-start"><span
+                                    style="color:var(--green-light);font-size:18px;line-height:1.3">✓</span><span
+                                    style="font-size:15px;opacity:.9;line-height:1.5">Cronograma claro: calma,
+                                    organização e lucro</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resultado -->
+                <div class="reveal"
+                    style="margin-top:40px;background:linear-gradient(135deg,var(--gold-bright),var(--gold));border-radius:20px;padding:30px;max-width:700px;margin-left:auto;margin-right:auto;margin-top:40px;box-shadow:0 12px 35px rgba(212,160,23,.25)">
+                    <p
+                        style="font-family:'Montserrat';font-weight:800;font-size:clamp(16px,2.5vw,22px);color:var(--choco);line-height:1.4">
+                        Investimento único de R$27,99 → Retorno potencial de até <span
+                            style="font-size:clamp(22px,3.5vw,32px);font-weight:900">361× o valor investido</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner Fullwidth com Imagem -->
+        <div style="position:relative;height:clamp(180px,25vw,300px);overflow:hidden">
+            <img loading="lazy" src="img/kitovo.jpg" alt=""
+                style="width:100%;height:100%;object-fit:cover;object-position:center 40%">
+            <div
+                style="position:absolute;inset:0;background:linear-gradient(to right,rgba(12,4,4,.92) 0%,rgba(12,4,4,.5) 50%,rgba(12,4,4,.92) 100%);display:flex;align-items:center;justify-content:center">
+                <div style="text-align:center;padding:20px">
+                    <p
+                        style="font-family:'Montserrat';font-weight:900;font-size:clamp(22px,4vw,40px);color:#fff;text-shadow:0 3px 10px rgba(0,0,0,.5);line-height:1.3">
+                        Tudo isso por menos que<br>uma caixa de bombom</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section-dark" style="padding:80px 0">
+        <div class="container text-center">
+            <span class="badge-pill reveal">★★★★★ AVALIAÇÕES</span>
+            <h2 class="sec-title reveal">Quem Comprou, Faturou!</h2>
+        </div>
+        <div class="carousel-wrap">
+            <div class="carousel-track" id="carouselTrack"></div>
+        </div>
+    </section>
+
+    <!-- OFERTA PRINCIPAL -->
+    <section id="oferta" class="section-red" style="padding:100px 0">
+        <!-- Decorative floating eggs -->
+        <div class="float-egg"
+            style="width:70px;height:90px;background:linear-gradient(135deg,#FFD700,#B8860B);top:10%;right:10%;animation-delay:1s;opacity:.1">
+        </div>
+        <div class="float-egg"
+            style="width:45px;height:58px;background:linear-gradient(135deg,#FFD700,#8B6508);bottom:20%;left:8%;animation-delay:3s;opacity:.08">
+        </div>
+
+        <div class="container text-center">
+            <div class="offer-box reveal">
+                <span class="o-tag badge-pill" style="background:var(--gold);margin-bottom:30px">🔥 OFERTA ESPECIAL DE
+                    LANÇAMENTO</span>
+
+                <p style="font-size:16px;color:#fff;opacity:.9;margin-bottom:8px">Tudo isso junto sairia por:</p>
+                <p class="offer-old" style="font-family:'Montserrat';color:#ffffff;opacity:1 !important">R$197,00</p>
+                <p style="font-size:20px;font-weight:800;color:var(--gold-light);margin-bottom:5px">Mas hoje você leva
+                    por apenas:</p>
+
+                <div class="offer-new">R$27<span class="offer-cents">,99</span></div>
+
+                <p class="offer-inst">ou 3x de R$10,26 sem juros</p>
+
+                <p style="font-size:14px;font-weight:700;color:#fff;margin-bottom:20px;opacity:.9">⏰ Essa oferta pode
+                    sair do ar a qualquer momento</p>
+
+                <a href="https://pay.kiwify.com.br/xQjb0Fz" class="cta-btn"
+                    style="width:100%;max-width:480px;font-size:19px;padding:24px 30px;box-shadow:0 8px 30px rgba(255,215,0,.4),0 0 0 4px rgba(255,215,0,.15)">
+                    QUERO MEU KIT AGORA
+                </a>
+
+                <p style="font-size:14px;font-weight:700;color:var(--gold-light);margin-top:18px">⚡ Acesso imediato após
+                    pagamento · Risco zero</p>
+
+                <div class="seals">
+                    <span class="seal">🔒 Compra Segura</span>
+                    <span class="seal">💳 Pix, Cartão, Boleto</span>
+                    <span class="seal">🛡️ Garantia 7 Dias</span>
+                    <span class="seal">✅ Acesso Imediato</span>
+                </div>
+            </div>
+
+            <div class="guarantee-box reveal" style="transition-delay:.2s">
+                <div class="gar-shield">🛡️</div>
+                <div style="text-align:left">
+                    <div class="gar-title">Garantia Incondicional de 7 Dias</div>
+                    <div class="gar-text">Se por qualquer motivo você não gostar, devolvemos 100% do seu dinheiro. Sem
+                        perguntas, sem burocracia. Risco ZERO pra você.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-black" style="padding:80px 0">
+        <div class="container text-center">
+            <h2 class="sec-title reveal">Dúvidas Frequentes</h2>
+            <div class="faq-list" id="faqList">
+                <div class="faq-item open">
+                    <div class="faq-q">Preciso saber fazer ovos para comprar?<span class="faq-icon">+</span></div>
+                    <div class="faq-a">Não! O kit ensina do ZERO. As 16 receitas são passo a passo com ingredientes
+                        exatos e medidas. Se você sabe mexer uma panela, consegue fazer ovos profissionais que vendem.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Quanto preciso investir para começar a produzir?<span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-a">Entre R$300 e R$500 em ingredientes e embalagens. Com a precificação do kit, você
+                        recupera esse valor na primeira semana de vendas e transforma em lucro.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Recebo na hora?<span class="faq-icon">+</span></div>
+                    <div class="faq-a">Sim! Imediatamente após o pagamento (inclusive via Pix) você recebe tudo por
+                        e-mail: PDFs, planilhas editáveis e links dos templates para download instantâneo.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Esse preço é por mês?<span class="faq-icon">+</span></div>
+                    <div class="faq-a">NÃO! Pagamento ÚNICO de R$27,99. Sem mensalidade, sem taxa escondida, sem
+                        surpresas. Paga uma vez e é seu pra sempre.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Funciona em cidade pequena?<span class="faq-icon">+</span></div>
+                    <div class="faq-a">Funciona AINDA MELHOR! Menos concorrência + boca a boca forte. Temos alunas em
+                        cidades de 15 mil habitantes que faturaram mais de R$3.000 vendendo por WhatsApp.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">E se eu não gostar?<span class="faq-icon">+</span></div>
+                    <div class="faq-a">Garantia incondicional de 7 dias. Devolvemos 100% do valor sem perguntas, sem
+                        burocracia. Risco absolutamente ZERO.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Consigo usar os templates sem saber design?<span class="faq-icon">+</span></div>
+                    <div class="faq-a">Sim! São 100% editáveis no Canva gratuito. Você só troca texto e fotos. Zero
+                        conhecimento técnico necessário, qualquer pessoa consegue usar.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Ainda dá tempo pra essa Páscoa?<span class="faq-icon">+</span></div>
+                    <div class="faq-a">SIM! Quanto antes começar, melhor. Mas mesmo com pouco tempo o kit te organiza e
+                        acelera o processo com o checklist semanal estratégico.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section-red" style="padding:80px 0">
+        <div class="container text-center reveal">
+            <h2 style="font-size:clamp(26px,4.5vw,42px);font-weight:900;margin-bottom:15px">Sua Páscoa Lucrativa Começa
+                AGORA 🚀</h2>
+            <p style="font-size:17px;opacity:.85;margin-bottom:35px;max-width:600px;margin-left:auto;margin-right:auto">
+                Não espere a véspera. Quem fatura é quem se prepara com antecedência. Garanta o melhor preço enquanto
+                está disponível.
+            </p>
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:35px">
+                <span
+                    style="background:rgba(0,0,0,.2);padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600">📖
+                    Guia Completo</span>
+                <span
+                    style="background:rgba(0,0,0,.2);padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600">🍫
+                    16 Receitas</span>
+                <span
+                    style="background:rgba(0,0,0,.2);padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600">💰
+                    Planilhas</span>
+                <span
+                    style="background:rgba(0,0,0,.2);padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600">✅
+                    Checklist</span>
+                <span
+                    style="background:rgba(0,0,0,.2);padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600">🎨
+                    Templates</span>
+            </div>
+            <a href="#oferta" class="cta-btn" style="width:100%;max-width:450px;font-size:18px;padding:22px">
+                QUERO MEU KIT AGORA POR R$27,99
+            </a>
+            <p style="font-size:12px;opacity:.5;margin-top:16px">Acesso imediato • Garantia 7 dias • Pagamento 100%
+                seguro</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <h4>PÁSCOA LUCRATIVA 2026</h4>
+            <div class="foot-links">
+                <a href="#">Termos de Uso</a>
+                <a href="#">Privacidade</a>
+                <a href="#">Contato</a>
+            </div>
+            <p style="font-size:10px;opacity:.3;max-width:500px;margin:0 auto 15px">Este produto não garante resultados
+                específicos. Resultados variam conforme dedicação e esforço individual. Os exemplos são ilustrativos.
+            </p>
+            <p>&copy; 2026 Páscoa Lucrativa — Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- STICKY CTA MOBILE -->
+    <div id="sticky">
+        <div class="st-info">
+            <p>Kit Completo<br><span>R$27,99</span></p>
+        </div>
+        <a href="#oferta" class="st-btn">GARANTIR ACESSO →</a>
+    </div>
+
+    <script>
+        // Reviews data
+        const reviews = [
+            { n: "Maria S.", c: "BH, MG", v: "R$4.200", t: "Investi R$27,99 e faturei R$4.200 na minha primeira Páscoa! A planilha de precificação mudou tudo — eu tava cobrando muito barato." },
+            { n: "Ana C.", c: "São Paulo, SP", v: "R$6.800", t: "Nunca tinha feito um ovo na vida. Segui as receitas e meus ovos ficaram LINDOS. Vendi tudo em 5 dias!" },
+            { n: "Juliana R.", c: "Curitiba, PR", v: "R$3.600", t: "A planilha de encomendas me salvou. Ano passado perdi pedidos por desorganização. Esse ano controlei tudo." },
+            { n: "Patrícia M.", c: "Vitória, ES", v: "R$5.800", t: "Comecei com R$350 e terminei com R$5.800. Já tô planejando o Dia das Mães!" },
+            { n: "Fernanda L.", c: "Recife, PE", v: "R$3.200", t: "O checklist é genial. Cheguei na Páscoa 100% preparada sem esquecer NADA." },
+            { n: "Carla D.", c: "Porto Alegre, RS", v: "R$7.500", t: "Por R$27,99 recebi mais conteúdo que cursos de R$500. Indiquei pra todas as amigas." },
+            { n: "Renata O.", c: "Goiânia, GO", v: "R$4.800", t: "As trufas de maracujá e o ovo churros ESGOTARAM em 4 dias! Todo mundo queria." },
+            { n: "Luciana M.", c: "Florianópolis, SC", v: "R$9.200", t: "Já vendia ovos mas sem organização. Com o kit, TRIPLIQUEI o faturamento." },
+            { n: "Tatiana F.", c: "Campinas, SP", v: "R$2.800", t: "Moro em cidade pequena e achei que não ia funcionar. Vendi TUDO por WhatsApp." },
+            { n: "Bianca A.", c: "Salvador, BA", v: "R$5.100", t: "A parte de embalagem mudou meu jogo. Melhorei a apresentação e as vendas DOBRARAM." },
+            { n: "Daniela P.", c: "Manaus, AM", v: "R$3.900", t: "As receitas são à prova de erro. Acertei todos os ovos de primeira. Até chorei de orgulho!" },
+            { n: "Camila T.", c: "Brasília, DF", v: "R$8.300", t: "Fiz dos 3 cenários o moderado e passei. Meu marido não acreditou quando viu o extrato." }
+        ];
+
+        // Populate carousel
+        const track = document.getElementById('carouselTrack');
+        const mkCard = r => `<div class="rev-card"><div class="rev-badge">💰 ${r.v}</div><div class="rev-stars">★★★★★</div><p class="rev-text">"${r.t}"</p><div class="rev-author"><div class="rev-avatar">${r.n[0]}</div><div><div class="rev-name">${r.n}</div><div class="rev-city">${r.c}</div></div></div></div>`;
+        let h = ''; reviews.forEach(r => h += mkCard(r));
+        track.innerHTML = h + h; // duplicate for seamless loop
+
+        // Hero Carousel
+        (function () {
+            const carousel = document.getElementById('heroCarousel');
+            const dots = document.querySelectorAll('#carouselDots span');
+            if (!carousel) return;
+            const slides = carousel.querySelectorAll('.slide');
+            let cur = 0;
+            function goTo(i) {
+                slides[cur].classList.remove('active');
+                dots[cur].classList.remove('active');
+                cur = i;
+                slides[cur].classList.add('active');
+                dots[cur].classList.add('active');
+            }
+            dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); }));
+            setInterval(() => { goTo((cur + 1) % slides.length); }, 3000);
+        })();
+
+        // Observe VSL Video to Autoplay when in view (helps with mobile and browser policies)
+        const vslVideo = document.getElementById('vslVid');
+        if (vslVideo) {
+            const vslObs = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        vslVideo.play().catch(e => console.log('Autoplay prevented by browser', e));
+                    } else {
+                        vslVideo.pause();
+                    }
+                });
+            }, { threshold: 0.1 });
+            vslObs.observe(vslVideo);
+        }
+
+        // Unmute VSL on interaction
+        function unmuteVsl() {
+            const vid = document.getElementById('vslVid');
+            const overlay = document.getElementById('unmuteOverlay');
+            if (vid) {
+                vid.muted = false;
+                vid.play(); // ensure playing
+                overlay.style.display = 'none';
+            }
+        }
+
+        // Scroll Reveal - Repeats every time on scroll
+        const obs = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('active');
+            } else {
+                e.target.classList.remove('active');
+            }
+        }), { threshold: 0.08 });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+        // Count-up for stat numbers
+        const countObs = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) {
+                const el = e.target;
+                const target = +el.dataset.target;
+                const duration = 2000;
+                const start = performance.now();
+                const update = (now) => {
+                    const elapsed = now - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    el.textContent = Math.round(target * eased).toLocaleString('pt-BR');
+                    if (progress < 1) requestAnimationFrame(update);
+                };
+                requestAnimationFrame(update);
+                countObs.unobserve(el);
+            }
+        }), { threshold: 0.3 });
+        document.querySelectorAll('.count-stat').forEach(el => countObs.observe(el));
+
+        // FAQ
+        document.querySelectorAll('.faq-q').forEach(q => q.addEventListener('click', () => {
+            const item = q.parentElement;
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }));
+
+        // Countdown — 10 minutes
+        let end = localStorage.getItem('plTimer10');
+        if (!end || end - Date.now() < 0) { end = Date.now() + 10 * 60000; localStorage.setItem('plTimer10', end); }
+        function tick() {
+            let d = Math.max(0, end - Date.now());
+            const hh = Math.floor(d / 3600000); d %= 3600000;
+            const mm = Math.floor(d / 60000); d %= 60000;
+            const ss = Math.floor(d / 1000);
+            document.getElementById('th').textContent = String(hh).padStart(2, '0');
+            document.getElementById('tm').textContent = String(mm).padStart(2, '0');
+            document.getElementById('ts').textContent = String(ss).padStart(2, '0');
+        }
+        setInterval(tick, 1000); tick();
+
+        // Sticky CTA
+        const sticky = document.getElementById('sticky');
+        window.addEventListener('scroll', () => {
+            sticky.classList.toggle('visible', window.scrollY > 500);
+        });
+
+        // Gold Particle System for Hero
+        (function () {
+            const canvas = document.getElementById('particles-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let W, H;
+            function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+            resize(); window.addEventListener('resize', resize);
+
+            const particles = [];
+            const COUNT = 60;
+            for (let i = 0; i < COUNT; i++) {
+                particles.push({
+                    x: Math.random() * W,
+                    y: Math.random() * H,
+                    r: Math.random() * 3 + 1,
+                    dx: (Math.random() - 0.5) * 0.5,
+                    dy: Math.random() * 0.8 + 0.2,
+                    o: Math.random() * 0.5 + 0.2,
+                    type: Math.random() > 0.7 ? 'confetti' : 'dot',
+                    rot: Math.random() * 360,
+                    rotSpeed: (Math.random() - 0.5) * 3
+                });
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, W, H);
+                particles.forEach(p => {
+                    ctx.save();
+                    ctx.globalAlpha = p.o;
+                    if (p.type === 'confetti') {
+                        ctx.translate(p.x, p.y);
+                        ctx.rotate(p.rot * Math.PI / 180);
+                        ctx.fillStyle = Math.random() > 0.5 ? '#FFD700' : '#F2D06B';
+                        ctx.fillRect(-2, -5, 4, 10);
+                        p.rot += p.rotSpeed;
+                    } else {
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                        ctx.fillStyle = '#FFD700';
+                        ctx.shadowColor = '#FFD700';
+                        ctx.shadowBlur = 8;
+                        ctx.fill();
+                    }
+                    ctx.restore();
+
+                    p.x += p.dx;
+                    p.y += p.dy;
+                    if (p.y > H + 10) { p.y = -10; p.x = Math.random() * W; }
+                    if (p.x < -10) p.x = W + 10;
+                    if (p.x > W + 10) p.x = -10;
+                });
+                requestAnimationFrame(draw);
+            }
+            draw();
+        })();
+    </script>
+</body>
+
+</html>
