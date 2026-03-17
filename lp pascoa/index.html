@@ -2374,6 +2374,73 @@
             draw();
         })();
     </script>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .whatsapp-float .wpp-label {
+            background: #25D366;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 14px;
+            border-radius: 50px;
+            box-shadow: 0 4px 14px rgba(0,0,0,.3);
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: opacity .3s, transform .3s;
+            pointer-events: none;
+        }
+        .whatsapp-float:hover .wpp-label {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .whatsapp-float .wpp-icon {
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 18px rgba(37,211,102,.5);
+            animation: wpp-pulse 2s infinite;
+            flex-shrink: 0;
+        }
+        .whatsapp-float .wpp-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: #fff;
+        }
+        @keyframes wpp-pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(37,211,102,.6); }
+            70%  { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+    </style>
+    <a class="whatsapp-float"
+       href="https://wa.me/5527998434186"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Fale conosco pelo WhatsApp">
+        <span class="wpp-label">Fale conosco!</span>
+        <span class="wpp-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path d="M16 .5C7.44.5.5 7.44.5 16c0 2.74.7 5.42 2.04 7.78L.5 31.5l7.94-2.08A15.43 15.43 0 0016 31.5C24.56 31.5 31.5 24.56 31.5 16S24.56.5 16 .5zm0 28.18a13.6 13.6 0 01-6.93-1.9l-.5-.3-5.17 1.36 1.38-5.03-.32-.52A13.6 13.6 0 012.32 16C2.32 8.44 8.44 2.32 16 2.32S29.68 8.44 29.68 16 23.56 28.68 16 28.68zm7.44-10.22c-.4-.2-2.38-1.18-2.75-1.31-.37-.13-.63-.2-.9.2s-1.03 1.31-1.27 1.58c-.23.27-.46.3-.86.1a10.9 10.9 0 01-3.21-1.98 12.1 12.1 0 01-2.22-2.77c-.23-.4 0-.62.18-.82.17-.18.4-.46.6-.7.18-.22.24-.38.37-.63.12-.25.06-.47-.03-.67-.1-.2-.9-2.17-1.23-2.97-.32-.78-.65-.67-.9-.68l-.76-.01c-.27 0-.7.1-1.06.47-.37.37-1.4 1.37-1.4 3.33s1.43 3.86 1.63 4.13c.2.26 2.82 4.3 6.83 6.03.95.41 1.7.66 2.28.84.96.3 1.83.26 2.52.16.77-.12 2.38-.97 2.72-1.91.33-.94.33-1.74.23-1.91-.1-.17-.37-.27-.77-.47z"/>
+            </svg>
+        </span>
+    </a>
 </body>
 
 </html>
